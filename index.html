@@ -1,0 +1,907 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Funngro for Companies | Hire Talented Teenagers | Teenlancer Platform India</title>
+  <meta name="description" content="Funngro connects smart companies with talented Indian teenagers for freelance projects. Cost-effective, innovative talent for graphic design, social media, content writing, web development & more. As seen on Shark Tank India." />
+  <link rel="canonical" href="https://www.funngro.com/company" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Geist:wght@300;400;500;600;700&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #0a0a0b;
+      --bg-1: #111114;
+      --bg-2: #18181c;
+      --bg-3: #1f1f24;
+      --surface: #242429;
+      --border: rgba(255,255,255,0.07);
+      --border-hover: rgba(255,255,255,0.14);
+      --text-1: #f5f5f5;
+      --text-2: #9999aa;
+      --text-3: #666677;
+      --accent: #7c6af7;
+      --accent-2: #5b8af0;
+      --accent-glow: rgba(124,106,247,0.25);
+      --accent-muted: rgba(124,106,247,0.12);
+      --green: #34c98d;
+      --green-muted: rgba(52,201,141,0.1);
+      --amber: #e8b84b;
+      --amber-muted: rgba(232,184,75,0.1);
+      --r: 10px;
+      --r-lg: 18px;
+      --r-xl: 28px;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Geist', system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--text-1);
+      overflow-x: hidden;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Noise texture overlay */
+    body::before {
+      content: '';
+      position: fixed; inset: 0; z-index: 0; pointer-events: none;
+      opacity: 0.025;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+      background-size: 200px 200px;
+    }
+
+    /* ─── NAV ─── */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 999;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 20px 48px;
+      border-bottom: 1px solid transparent;
+      transition: all 0.4s ease;
+      backdrop-filter: blur(0px);
+    }
+    nav.scrolled {
+      background: rgba(10,10,11,0.85);
+      border-bottom-color: var(--border);
+      backdrop-filter: blur(24px);
+      padding: 16px 48px;
+    }
+    .nav-logo {
+      font-family: 'Instrument Serif', serif;
+      font-size: 40px; font-style: italic;
+      color: var(--text-1); text-decoration: none;
+      letter-spacing: -0.3px;
+    }
+    .nav-logo em { color: var(--accent); font-style: normal; }
+    .nav-links { display: flex; align-items: center; gap: 32px; list-style: none; }
+    .nav-links a {
+      font-size: 17px; font-weight: 500; color: var(--text-2);
+      text-decoration: none; letter-spacing: 0.01em;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--text-1); }
+    .nav-cta {
+      background: var(--accent); color: #fff !important;
+      padding: 9px 20px; border-radius: 8px;
+      font-weight: 600 !important; font-size: 19px !important;
+      transition: opacity 0.2s, transform 0.15s !important;
+    }
+    .nav-cta:hover { opacity: 0.88; transform: translateY(-1px); }
+
+    /* ─── HERO ─── */
+    .hero {
+      min-height: 100vh;
+      display: flex; flex-direction: column; justify-content: center;
+      padding: 140px 48px 80px;
+      position: relative; overflow: hidden;
+    }
+
+    .hero-bg-orb {
+      position: absolute; border-radius: 50%; pointer-events: none;
+      filter: blur(80px);
+    }
+    .orb-1 { width: 600px; height: 600px; top: -100px; right: -100px; background: rgba(124,106,247,0.1); }
+    .orb-2 { width: 400px; height: 400px; bottom: -50px; left: -100px; background: rgba(91,138,240,0.07); }
+
+    .hero-inner {
+      max-width: 1200px; margin: 0 auto; width: 100%;
+      display: grid; grid-template-columns: 1fr 420px; gap: 80px; align-items: center;
+      position: relative; z-index: 1;
+    }
+
+    .hero-eyebrow {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 6px 12px; border-radius: 6px;
+      background: var(--accent-muted); border: 1px solid rgba(124,106,247,0.2);
+      font-size: 11px; font-weight: 600; letter-spacing: 0.08em;
+      text-transform: uppercase; color: var(--accent);
+      margin-bottom: 28px;
+    }
+    .hero-eyebrow svg { width: 12px; height: 12px; fill: currentColor; }
+
+    .hero h1 {
+      font-family: 'Instrument Serif', serif;
+      font-size: clamp(48px, 5.5vw, 76px);
+      font-weight: 400; line-height: 1.06;
+      letter-spacing: -2px; color: var(--text-1);
+      margin-bottom: 24px;
+    }
+    .hero h1 em {
+      font-style: italic; color: var(--accent);
+    }
+
+    .hero-sub {
+      font-size: 17px; color: var(--text-2); font-weight: 400;
+      line-height: 1.75; max-width: 520px; margin-bottom: 44px;
+    }
+
+    .hero-actions { display: flex; align-items: center; gap: 14px; flex-wrap: wrap; margin-bottom: 52px; }
+
+    .btn-primary {
+      background: var(--accent); color: #fff;
+      padding: 13px 26px; border-radius: 8px;
+      font-size: 14px; font-weight: 600; text-decoration: none;
+      transition: all 0.2s; display: inline-flex; align-items: center; gap: 7px;
+      box-shadow: 0 0 0 0 var(--accent-glow);
+    }
+    .btn-primary:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 8px 32px var(--accent-glow);
+    }
+    .btn-ghost {
+      color: var(--text-2); font-size: 13px; font-weight: 500;
+      text-decoration: none; display: inline-flex; align-items: center; gap: 6px;
+      padding: 13px 0; transition: color 0.2s;
+    }
+    .btn-ghost:hover { color: var(--text-1); }
+
+    .hero-tags { display: flex; flex-wrap: wrap; gap: 8px; }
+    .hero-tag {
+      background: var(--bg-2); border: 1px solid var(--border);
+      padding: 6px 14px; border-radius: 6px;
+      font-size: 12px; color: var(--text-3); font-weight: 500;
+      letter-spacing: 0.01em; transition: all 0.2s;
+    }
+    .hero-tag:hover { color: var(--text-2); border-color: var(--border-hover); }
+
+    /* Hero panel */
+    .hero-panel {
+      background: var(--bg-1);
+      border: 1px solid var(--border);
+      border-radius: var(--r-xl);
+      padding: 32px;
+      position: relative;
+    }
+    .hero-panel::before {
+      content: '';
+      position: absolute; inset: -1px; border-radius: var(--r-xl);
+      background: linear-gradient(135deg, rgba(124,106,247,0.3), transparent 50%, rgba(91,138,240,0.1));
+      z-index: -1;
+    }
+    .panel-header {
+      display: flex; justify-content: space-between; align-items: center;
+      margin-bottom: 28px;
+    }
+    .panel-title { font-size: 12px; font-weight: 600; color: var(--text-3); text-transform: uppercase; letter-spacing: 0.08em; }
+    .panel-badge {
+      background: var(--amber-muted); border: 1px solid rgba(232,184,75,0.2);
+      color: var(--amber); font-size: 11px; font-weight: 600;
+      padding: 4px 10px; border-radius: 5px; letter-spacing: 0.04em;
+    }
+    .stat-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 20px; }
+    .stat-box {
+      background: var(--bg-2); border: 1px solid var(--border);
+      border-radius: var(--r); padding: 20px 18px;
+    }
+    .stat-val {
+      font-family: 'Instrument Serif', serif;
+      font-size: 32px; font-weight: 400; letter-spacing: -1px;
+      color: var(--text-1); display: block; margin-bottom: 4px;
+    }
+    .stat-lbl { font-size: 12px; color: var(--text-3); font-weight: 500; }
+    .stat-box.accent-box { background: var(--accent-muted); border-color: rgba(124,106,247,0.2); }
+    .stat-box.accent-box .stat-val { color: var(--accent); }
+    .panel-divider { height: 1px; background: var(--border); margin: 20px 0; }
+    .panel-row { display: flex; gap: 12px; }
+    .panel-mini {
+      flex: 1; background: var(--bg-2); border: 1px solid var(--border);
+      border-radius: var(--r); padding: 16px;
+    }
+    .panel-mini-val {
+      font-family: 'Geist Mono', monospace;
+      font-size: 20px; font-weight: 500; color: var(--green); display: block; margin-bottom: 3px;
+    }
+    .panel-mini-lbl { font-size: 11px; color: var(--text-3); }
+    .panel-mini.amber .panel-mini-val { color: var(--amber); }
+
+    /* ─── TICKER ─── */
+    .ticker {
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      background: var(--bg-1);
+      padding: 14px 0; overflow: hidden;
+    }
+    .ticker-track {
+      display: flex; gap: 0; width: max-content;
+      animation: ticker 30s linear infinite;
+    }
+    .ticker-item {
+      display: flex; align-items: center; gap: 12px;
+      padding: 0 28px; white-space: nowrap;
+      font-size: 12px; font-weight: 500; color: var(--text-3);
+      letter-spacing: 0.05em; text-transform: uppercase;
+    }
+    .ticker-sep { color: var(--accent); }
+
+    /* ─── SECTIONS ─── */
+    section { padding: 100px 48px; position: relative; }
+    .s-inner { max-width: 1200px; margin: 0 auto; }
+    .eyebrow {
+      font-size: 11px; font-weight: 600; text-transform: uppercase;
+      letter-spacing: 0.1em; color: var(--accent);
+      display: flex; align-items: center; gap: 8px; margin-bottom: 16px;
+    }
+    .eyebrow::before { content: ''; width: 20px; height: 1px; background: var(--accent); }
+    h2.s-title {
+      font-family: 'Instrument Serif', serif;
+      font-size: clamp(36px, 4vw, 54px);
+      font-weight: 400; letter-spacing: -1.5px;
+      line-height: 1.1; color: var(--text-1);
+    }
+    h2.s-title em { font-style: italic; color: var(--accent); }
+
+    /* ─── HOW IT WORKS ─── */
+    .how-section { background: var(--bg-1); }
+    .how-header {
+      display: flex; justify-content: space-between; align-items: flex-end;
+      margin-bottom: 64px; gap: 32px;
+    }
+    .steps-grid {
+      display: grid; grid-template-columns: repeat(5, 1fr); gap: 1px;
+      background: var(--border); border-radius: var(--r-lg); overflow: hidden;
+    }
+    .step {
+      background: var(--bg-1); padding: 36px 24px;
+      transition: background 0.2s;
+    }
+    .step:hover { background: var(--bg-2); }
+    .step-num {
+      font-family: 'Geist Mono', monospace;
+      font-size: 11px; font-weight: 500; color: var(--accent);
+      letter-spacing: 0.08em; margin-bottom: 20px; display: block;
+    }
+    .step h3 { font-size: 15px; font-weight: 600; margin-bottom: 10px; color: var(--text-1); }
+    .step p { font-size: 13px; color: var(--text-3); line-height: 1.65; }
+
+    /* ─── SERVICES ─── */
+    .services-section { background: var(--bg); }
+    .services-header { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: end; margin-bottom: 56px; }
+    .services-desc { font-size: 15px; color: var(--text-2); line-height: 1.75; max-width: 360px; }
+
+    .services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--border); border-radius: var(--r-xl); overflow: hidden; }
+    .service-card {
+      background: var(--bg-1); padding: 36px;
+      transition: background 0.25s;
+      position: relative; overflow: hidden;
+    }
+    .service-card:hover { background: var(--bg-2); }
+    .service-card.featured { background: var(--accent-muted); }
+    .service-card.featured:hover { background: rgba(124,106,247,0.18); }
+    .service-card.featured::before {
+      content: 'Popular';
+      position: absolute; top: 24px; right: 24px;
+      background: var(--accent); color: #fff;
+      font-size: 10px; font-weight: 700; letter-spacing: 0.06em;
+      text-transform: uppercase; padding: 4px 10px; border-radius: 4px;
+    }
+    .service-icon {
+      width: 44px; height: 44px; border-radius: 10px;
+      background: var(--bg-2); border: 1px solid var(--border);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 20px; margin-bottom: 24px;
+    }
+    .service-card.featured .service-icon { background: rgba(124,106,247,0.15); border-color: rgba(124,106,247,0.2); }
+    .service-card h3 { font-size: 16px; font-weight: 600; margin-bottom: 10px; color: var(--text-1); }
+    .service-card p { font-size: 13px; color: var(--text-2); line-height: 1.65; margin-bottom: 20px; }
+    .service-price { font-family: 'Geist Mono', monospace; font-size: 13px; color: var(--green); font-weight: 500; }
+    .service-card.featured .service-price { color: var(--accent); }
+
+    /* ─── TESTIMONIALS ─── */
+    .test-section { background: var(--bg-1); }
+    .test-header { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 56px; }
+    .test-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    .test-card {
+      background: var(--bg-2); border: 1px solid var(--border);
+      border-radius: var(--r-lg); padding: 32px;
+      transition: border-color 0.2s, transform 0.2s;
+    }
+    .test-card:hover { border-color: var(--border-hover); transform: translateY(-3px); }
+    .stars { color: var(--amber); font-size: 12px; letter-spacing: 2px; margin-bottom: 20px; }
+    .test-text {
+      font-family: 'Instrument Serif', serif;
+      font-size: 17px; line-height: 1.6; color: var(--text-1);
+      font-style: italic; margin-bottom: 28px;
+    }
+    .test-person { display: flex; align-items: center; gap: 12px; }
+    .test-avatar {
+      width: 38px; height: 38px; border-radius: 50%;
+      background: var(--accent); display: flex; align-items: center; justify-content: center;
+      font-weight: 700; font-size: 14px; color: #fff; flex-shrink: 0;
+    }
+    .test-name { font-size: 14px; font-weight: 600; color: var(--text-1); }
+    .test-company { font-size: 12px; color: var(--text-3); margin-top: 2px; }
+
+    /* ─── WHY TEENS ─── */
+    .why-section { background: var(--bg); }
+    .why-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; }
+    .why-left h2 { margin-bottom: 20px; }
+    .why-left > p { font-size: 15px; color: var(--text-2); line-height: 1.8; margin-bottom: 40px; }
+    .why-points { display: flex; flex-direction: column; gap: 2px; }
+    .why-point {
+      display: flex; gap: 20px; align-items: flex-start;
+      padding: 24px; border-radius: var(--r); border: 1px solid transparent;
+      transition: all 0.2s;
+    }
+    .why-point:hover { background: var(--bg-1); border-color: var(--border); }
+    .why-icon {
+      width: 36px; height: 36px; border-radius: 8px;
+      background: var(--bg-2); border: 1px solid var(--border);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 16px; flex-shrink: 0; margin-top: 2px;
+    }
+    .why-point h4 { font-size: 15px; font-weight: 600; margin-bottom: 5px; color: var(--text-1); }
+    .why-point p { font-size: 13px; color: var(--text-2); line-height: 1.65; }
+
+    .why-right { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; padding-top: 20px; }
+    .why-stat {
+      background: var(--bg-1); border: 1px solid var(--border);
+      border-radius: var(--r-lg); padding: 28px 24px;
+      transition: all 0.2s;
+    }
+    .why-stat:hover { border-color: var(--border-hover); transform: scale(1.02); }
+    .why-stat.green { border-color: rgba(52,201,141,0.15); }
+    .why-stat.purple { border-color: rgba(124,106,247,0.15); background: var(--accent-muted); }
+    .why-stat-val {
+      font-family: 'Instrument Serif', serif;
+      font-size: 38px; letter-spacing: -2px; font-weight: 400;
+      display: block; margin-bottom: 6px; color: var(--text-1);
+    }
+    .why-stat.green .why-stat-val { color: var(--green); }
+    .why-stat.purple .why-stat-val { color: var(--accent); }
+    .why-stat-lbl { font-size: 12px; color: var(--text-3); font-weight: 500; line-height: 1.4; }
+
+    /* ─── TRUST ─── */
+    .trust-bar {
+      border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);
+      background: var(--bg-1); padding: 48px;
+    }
+    .trust-lbl { text-align: center; font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-3); margin-bottom: 32px; }
+    .trust-logos { display: flex; justify-content: center; align-items: center; flex-wrap: wrap; gap: 0; }
+    .trust-logo {
+      padding: 12px 28px; font-size: 14px; font-weight: 700;
+      color: var(--text-3); border-right: 1px solid var(--border);
+      transition: color 0.2s; letter-spacing: -0.3px;
+    }
+    .trust-logo:last-child { border-right: none; }
+    .trust-logo:hover { color: var(--text-1); }
+
+    /* ─── MEDIA ─── */
+    .media-section { background: var(--bg); padding: 72px 48px; }
+    .media-inner { max-width: 1200px; margin: 0 auto; }
+    .media-row { display: flex; justify-content: center; flex-wrap: wrap; gap: 10px; margin-top: 36px; }
+    .media-tag {
+      background: var(--bg-1); border: 1px solid var(--border);
+      padding: 10px 20px; border-radius: 7px;
+      font-size: 13px; font-weight: 500; color: var(--text-2);
+      transition: all 0.2s;
+    }
+    .media-tag:hover { color: var(--text-1); border-color: var(--border-hover); }
+
+    /* ─── CTA ─── */
+    .cta-section {
+      background: var(--bg-1); padding: 120px 48px; text-align: center;
+      position: relative; overflow: hidden;
+    }
+    .cta-section::before {
+      content: '';
+      position: absolute; top: 0; left: 50%; transform: translateX(-50%);
+      width: 800px; height: 1px;
+      background: linear-gradient(90deg, transparent, var(--accent), transparent);
+    }
+    .cta-orb {
+      position: absolute; width: 500px; height: 500px;
+      border-radius: 50%; left: 50%; top: 50%;
+      transform: translate(-50%, -50%);
+      background: radial-gradient(circle, rgba(124,106,247,0.08), transparent 70%);
+      pointer-events: none;
+    }
+    .cta-section h2 {
+      font-family: 'Instrument Serif', serif;
+      font-size: clamp(40px, 5vw, 66px);
+      font-weight: 400; letter-spacing: -2px;
+      color: var(--text-1); max-width: 700px;
+      margin: 0 auto 18px; line-height: 1.08;
+      position: relative; z-index: 1;
+    }
+    .cta-section h2 em { font-style: italic; color: var(--accent); }
+    .cta-section p { font-size: 16px; color: var(--text-2); max-width: 480px; margin: 0 auto 40px; position: relative; z-index: 1; }
+    .cta-btns { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; position: relative; z-index: 1; }
+    .btn-outline {
+      border: 1px solid var(--border); color: var(--text-1);
+      padding: 13px 26px; border-radius: 8px;
+      font-size: 14px; font-weight: 500; text-decoration: none;
+      transition: all 0.2s;
+    }
+    .btn-outline:hover { border-color: var(--border-hover); background: var(--bg-2); }
+
+    /* ─── FOOTER ─── */
+    footer { background: var(--bg); padding: 64px 48px 40px; border-top: 1px solid var(--border); }
+    .footer-inner { max-width: 1200px; margin: 0 auto; }
+    .footer-top { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 60px; margin-bottom: 48px; }
+    .footer-brand .logo { font-family: 'Instrument Serif', serif; font-size: 22px; font-style: italic; color: var(--text-1); margin-bottom: 12px; display: block; }
+    .footer-brand p { font-size: 13px; color: var(--text-3); line-height: 1.7; max-width: 240px; }
+    .footer-col h4 { font-size: 11px; font-weight: 600; color: var(--text-3); margin-bottom: 18px; letter-spacing: 0.08em; text-transform: uppercase; }
+    .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 11px; }
+    .footer-col ul li a { font-size: 13px; color: var(--text-3); text-decoration: none; transition: color 0.2s; }
+    .footer-col ul li a:hover { color: var(--text-1); }
+    .footer-bottom { border-top: 1px solid var(--border); padding-top: 28px; display: flex; justify-content: space-between; align-items: center; }
+    .footer-bottom p { font-size: 12px; color: var(--text-3); }
+    .footer-links { display: flex; gap: 24px; }
+    .footer-links a { color: var(--text-3); text-decoration: none; font-size: 12px; transition: color 0.2s; }
+    .footer-links a:hover { color: var(--text-1); }
+
+    /* ─── ANIMATIONS ─── */
+    @keyframes ticker { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+    @keyframes fadeUp { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: translateY(0); } }
+
+    .hero-content > * { animation: fadeUp 0.6s ease both; }
+    .hero-eyebrow { animation-delay: 0s; }
+    .hero h1 { animation-delay: 0.08s; }
+    .hero-sub { animation-delay: 0.16s; }
+    .hero-actions { animation-delay: 0.24s; }
+    .hero-tags { animation-delay: 0.32s; }
+    .hero-panel { animation: fadeUp 0.7s 0.2s ease both; }
+
+    .reveal { opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease, transform 0.6s ease; }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+
+    @media (max-width: 1024px) {
+      nav, nav.scrolled { padding: 16px 24px; }
+      .hero, section { padding: 100px 24px 60px; }
+      .hero-inner { grid-template-columns: 1fr; }
+      .hero-panel { display: none; }
+      .services-header { grid-template-columns: 1fr; }
+      .why-inner { grid-template-columns: 1fr; }
+      .footer-top { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+      .services-grid, .test-grid { grid-template-columns: 1fr; }
+      .steps-grid { grid-template-columns: 1fr 1fr; gap: 1px; }
+      .trust-logos { gap: 8px; }
+      .footer-top { grid-template-columns: 1fr; gap: 28px; }
+      .footer-bottom { flex-direction: column; gap: 12px; text-align: center; }
+      .how-header { flex-direction: column; align-items: flex-start; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav id="mainNav">
+    <a class="nav-logo" href="https://www.funngro.com">funn<em>gro</em></a>
+    <ul class="nav-links">
+      <li><a href="#services">Services</a></li>
+      <li><a href="#how-it-works">How It Works</a></li>
+      <li><a href="#why-teens">Why Teens</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="mailto:hello@funngro.com" class="nav-cta">Hire Talent →</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <header class="hero">
+    <div class="hero-bg-orb orb-1"></div>
+    <div class="hero-bg-orb orb-2"></div>
+    <div class="hero-inner">
+      <div class="hero-content">
+        <div class="hero-eyebrow">
+          <svg viewBox="0 0 24 24"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
+          Featured on Shark Tank India
+        </div>
+        <h1>Smart talent for<br><em>smart companies</em></h1>
+        <p class="hero-sub">Tap into 50 lakh+ talented Indian teenagers ready to work on your projects — cost-effective, creative, and fast. Help the next generation while growing your business.</p>
+        <div class="hero-actions">
+          <a href="mailto:hello@funngro.com" class="btn-primary">Hire a Teenlancer →</a>
+          <a href="#how-it-works" class="btn-ghost">See how it works ↓</a>
+        </div>
+        <div class="hero-tags">
+          <span class="hero-tag">Social Media</span>
+          <span class="hero-tag">Content Writing</span>
+          <span class="hero-tag">Graphic Design</span>
+          <span class="hero-tag">Web Development</span>
+          <span class="hero-tag">Video Creation</span>
+          <span class="hero-tag">Voice Over</span>
+        </div>
+      </div>
+
+      <div class="hero-panel">
+        <div class="panel-header">
+          <span class="panel-title">Platform overview</span>
+          <span class="panel-badge">Shark Tank ★</span>
+        </div>
+        <div class="stat-grid">
+          <div class="stat-box">
+            <span class="stat-val">50L+</span>
+            <span class="stat-lbl">Teenlancers</span>
+          </div>
+          <div class="stat-box accent-box">
+            <span class="stat-val">4K+</span>
+            <span class="stat-lbl">Companies</span>
+          </div>
+          <div class="stat-box">
+            <span class="stat-val">1K+</span>
+            <span class="stat-lbl">Live Projects</span>
+          </div>
+          <div class="stat-box">
+            <span class="stat-val">12</span>
+            <span class="stat-lbl">Categories</span>
+          </div>
+        </div>
+        <div class="panel-divider"></div>
+        <div class="panel-row">
+          <div class="panel-mini">
+            <span class="panel-mini-val">50%</span>
+            <span class="panel-mini-lbl">Avg cost saved</span>
+          </div>
+          <div class="panel-mini amber">
+            <span class="panel-mini-val amber">2 min</span>
+            <span class="panel-mini-lbl">To post a project</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- TICKER -->
+  <div class="ticker">
+    <div class="ticker-track">
+      <span class="ticker-item">Social Media <span class="ticker-sep">·</span></span>
+      <span class="ticker-item">Graphic Design <span class="ticker-sep">·</span></span>
+      <span class="ticker-item">Content Writing <span class="ticker-sep">·</span></span>
+      <span class="ticker-item">Video Creation <span class="ticker-sep">·</span></span>
+      <span class="ticker-item">Mobile App Development <span class="ticker-sep">·</span></span>
+      <span class="ticker-item">Campus Ambassador <span class="ticker-sep">·</span></span>
+      <span class="ticker-item">Research & Surveys <span class="ticker-sep">·</span></span>
+      <span class="ticker-item">Voice Over <span class="ticker-sep">·</span></span>
+      <span class="ticker-item">Influencer Marketing <span class="ticker-sep">·</span></span>
+      <span class="ticker-item">Data Entry <span class="ticker-sep">·</span></span>
+      <span class="ticker-item">Website Design <span class="ticker-sep">·</span></span>
+      <span class="ticker-item">Product Testing <span class="ticker-sep">·</span></span>
+      <span class="ticker-item">Social Media <span class="ticker-sep">·</span></span>
+      <span class="ticker-item">Graphic Design <span class="ticker-sep">·</span></span>
+      <span class="ticker-item">Content Writing <span class="ticker-sep">·</span></span>
+      <span class="ticker-item">Video Creation <span class="ticker-sep">·</span></span>
+      <span class="ticker-item">Mobile App Development <span class="ticker-sep">·</span></span>
+      <span class="ticker-item">Campus Ambassador <span class="ticker-sep">·</span></span>
+      <span class="ticker-item">Research & Surveys <span class="ticker-sep">·</span></span>
+      <span class="ticker-item">Voice Over <span class="ticker-sep">·</span></span>
+      <span class="ticker-item">Influencer Marketing <span class="ticker-sep">·</span></span>
+      <span class="ticker-item">Data Entry <span class="ticker-sep">·</span></span>
+      <span class="ticker-item">Website Design <span class="ticker-sep">·</span></span>
+      <span class="ticker-item">Product Testing <span class="ticker-sep">·</span></span>
+    </div>
+  </div>
+
+  <!-- HOW IT WORKS -->
+  <section class="how-section" id="how-it-works">
+    <div class="s-inner">
+      <div class="how-header reveal">
+        <div>
+          <div class="eyebrow">Process</div>
+          <h2 class="s-title">Get started in<br><em>five steps</em></h2>
+        </div>
+        <a href="mailto:hello@funngro.com" class="btn-primary">Start today →</a>
+      </div>
+      <div class="steps-grid">
+        <div class="step reveal">
+          <span class="step-num">01 / 05</span>
+          <h3>Register</h3>
+          <p>Create your free company profile in under 2 minutes.</p>
+        </div>
+        <div class="step reveal">
+          <span class="step-num">02 / 05</span>
+          <h3>Add Project</h3>
+          <p>Post your project with requirements, timeline, and budget.</p>
+        </div>
+        <div class="step reveal">
+          <span class="step-num">03 / 05</span>
+          <h3>Get Applications</h3>
+          <p>Receive a curated shortlist of best-matched teen talent.</p>
+        </div>
+        <div class="step reveal">
+          <span class="step-num">04 / 05</span>
+          <h3>Select Teens</h3>
+          <p>Review profiles, portfolios, and experience, then pick.</p>
+        </div>
+        <div class="step reveal">
+          <span class="step-num">05 / 05</span>
+          <h3>Get Delivered</h3>
+          <p>Approve work, release payment, post your next project.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="services-section" id="services">
+    <div class="s-inner">
+      <div class="services-header reveal">
+        <div>
+          <div class="eyebrow">Services</div>
+          <h2 class="s-title">Everything your<br><em>business needs</em></h2>
+        </div>
+        <p class="services-desc">From branding to technology, our teenlancers cover 12 categories with fresh perspectives and sharp skills — at a fraction of agency cost.</p>
+      </div>
+      <div class="services-grid">
+        <div class="service-card reveal">
+          <div class="service-icon">🎨</div>
+          <h3>Graphic Design</h3>
+          <p>Logos, brochures, social media posts, banners — professionally crafted by design-savvy teens.</p>
+          <div class="service-price">from ₹500</div>
+        </div>
+        <div class="service-card featured reveal">
+          <div class="service-icon">📱</div>
+          <h3>Social Media Management</h3>
+          <p>Hand your handles to teens who live and breathe social media. Real-time, on-trend content.</p>
+          <div class="service-price">from ₹5,000/mo</div>
+        </div>
+        <div class="service-card reveal">
+          <div class="service-icon">✍️</div>
+          <h3>Content Writing</h3>
+          <p>Blogs, articles, website copy — fresh voices with strong command over language and research.</p>
+          <div class="service-price">from ₹250/piece</div>
+        </div>
+        <div class="service-card reveal">
+          <div class="service-icon">🎬</div>
+          <h3>Video Creation</h3>
+          <p>Explainer videos, reels, brand stories — creative teen filmmakers ready to tell your story.</p>
+          <div class="service-price">from ₹1,500</div>
+        </div>
+        <div class="service-card reveal">
+          <div class="service-icon">💻</div>
+          <h3>Website & App Dev</h3>
+          <p>Market-ready websites and mobile apps built by teen developers fluent in the latest tech.</p>
+          <div class="service-price">from ₹5,000</div>
+        </div>
+        <div class="service-card reveal">
+          <div class="service-icon">🎙️</div>
+          <h3>Voice Over</h3>
+          <p>Professional voice-overs in 15 languages for ads, e-learning, podcasts, and product demos.</p>
+          <div class="service-price">from ₹1,500</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="test-section" id="testimonials">
+    <div class="s-inner">
+      <div class="test-header reveal">
+        <div>
+          <div class="eyebrow">Testimonials</div>
+          <h2 class="s-title">What companies<br><em>say about us</em></h2>
+        </div>
+        <a href="funngro-about.html" class="btn-outline">More about Funngro →</a>
+      </div>
+      <div class="test-grid">
+        <div class="test-card reveal">
+          <div class="stars">★★★★★</div>
+          <p class="test-text">"Excellent work! Cost-effective with great quality. Have used Funngro's graphic design, social media, and research talent — all delivered on time and beyond expectations."</p>
+          <div class="test-person">
+            <div class="test-avatar">D</div>
+            <div>
+              <div class="test-name">Darsh Golecha</div>
+              <div class="test-company">Monech</div>
+            </div>
+          </div>
+        </div>
+        <div class="test-card reveal">
+          <div class="stars">★★★★★</div>
+          <p class="test-text">"Completely impressed by an article written by a Grade IX student on digital payments — the research depth and perspective was truly remarkable for someone so young."</p>
+          <div class="test-person">
+            <div class="test-avatar">R</div>
+            <div>
+              <div class="test-name">Ravishankar Gopalan</div>
+              <div class="test-company">Execute Partners & Consultants LLP</div>
+            </div>
+          </div>
+        </div>
+        <div class="test-card reveal">
+          <div class="stars">★★★★★</div>
+          <p class="test-text">"Funngro services are excellent. The blogs they delivered were superb — amazed by the financial knowledge and writing maturity of these teenagers."</p>
+          <div class="test-person">
+            <div class="test-avatar">M</div>
+            <div>
+              <div class="test-name">Meetu</div>
+              <div class="test-company">Let's Evolve</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY TEENS -->
+  <section class="why-section" id="why-teens">
+    <div class="s-inner">
+      <div class="why-inner">
+        <div class="why-left reveal">
+          <div class="eyebrow">Why Teens</div>
+          <h2 class="s-title">The smartest<br><em>generation</em> is<br>ready to work</h2>
+          <p>Today's teenagers are digital natives, creative thinkers, and motivated earners. They bring an energy and a perspective that agencies simply can't replicate.</p>
+          <div class="why-points">
+            <div class="why-point">
+              <div class="why-icon">💡</div>
+              <div>
+                <h4>Innovative Thinking</h4>
+                <p>Teens bring fresh perspectives untainted by industry conventions — they think like your future customers.</p>
+              </div>
+            </div>
+            <div class="why-point">
+              <div class="why-icon">💰</div>
+              <div>
+                <h4>Cost Effective</h4>
+                <p>Save up to 50% compared to traditional agencies and freelancers, without compromising quality.</p>
+              </div>
+            </div>
+            <div class="why-point">
+              <div class="why-icon">⚡</div>
+              <div>
+                <h4>Fast Turnaround</h4>
+                <p>Motivated teens eager to build their portfolio deliver work quickly. Most projects done in days.</p>
+              </div>
+            </div>
+            <div class="why-point">
+              <div class="why-icon">🌱</div>
+              <div>
+                <h4>Social Impact</h4>
+                <p>Every project helps a young person earn, learn, and grow — giving back to the next generation.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="why-right reveal">
+          <div class="why-stat green">
+            <span class="why-stat-val">50%</span>
+            <span class="why-stat-lbl">Average cost savings vs traditional hiring</span>
+          </div>
+          <div class="why-stat purple">
+            <span class="why-stat-val">Gen Z</span>
+            <span class="why-stat-lbl">Customer mindset built right in</span>
+          </div>
+          <div class="why-stat">
+            <span class="why-stat-val">50L+</span>
+            <span class="why-stat-lbl">Talented teenlancers ready to work</span>
+          </div>
+          <div class="why-stat">
+            <span class="why-stat-val">2 min</span>
+            <span class="why-stat-lbl">To post your first project and go live</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRUST BAR -->
+  <div class="trust-bar">
+    <div class="s-inner">
+      <p class="trust-lbl">Trusted by companies across India</p>
+      <div class="trust-logos">
+        <span class="trust-logo">CarDekho</span>
+        <span class="trust-logo">Enerzy Solar</span>
+        <span class="trust-logo">StockPe</span>
+        <span class="trust-logo">Tarakki</span>
+        <span class="trust-logo">LegacyNext</span>
+        <span class="trust-logo">Monech</span>
+        <span class="trust-logo">Eco 365</span>
+        <span class="trust-logo">Mobigic</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- MEDIA -->
+  <section class="media-section">
+    <div class="media-inner">
+      <div class="eyebrow reveal">Press</div>
+      <h2 class="s-title reveal">As seen in</h2>
+      <div class="media-row reveal">
+        <span class="media-tag">Times of India</span>
+        <span class="media-tag">Business News Week</span>
+        <span class="media-tag">IBS Intelligence</span>
+        <span class="media-tag">Entrackr</span>
+        <span class="media-tag">The Daily Brunch</span>
+        <span class="media-tag">FM Live</span>
+        <span class="media-tag">Shark Tank India 🦈</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section">
+    <div class="cta-orb"></div>
+    <div class="reveal">
+      <h2>Ready to hire<br><em>smart teen talent?</em></h2>
+      <p>Join 4,000+ companies already building their future with Funngro teenlancers.</p>
+      <div class="cta-btns">
+        <a href="mailto:hello@funngro.com" class="btn-primary">Hire Now — Free to Start</a>
+        <a href="funngro-about.html" class="btn-outline">Learn About Funngro →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <span class="logo">funngro</span>
+          <p>Enabling Smart Teenagers and Smart Companies to realize their full potentials. It's Fun to Grow.</p>
+          <p style="margin-top:14px;font-size:11px;color:var(--text-3);">© 2025 Wishbanc Technologies Pvt. Ltd.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="funngro-about.html">About Us</a></li>
+            <li><a href="https://www.funngro.com/careers">Careers</a></li>
+            <li><a href="https://www.funngro.com/investors">Investors</a></li>
+            <li><a href="https://www.funngro.com/blog">Blog</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="#">Graphic Design</a></li>
+            <li><a href="#">Social Media</a></li>
+            <li><a href="#">Content Writing</a></li>
+            <li><a href="#">Web Development</a></li>
+            <li><a href="#">Video Creation</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Support</h4>
+          <ul>
+            <li><a href="https://www.funngro.com/faq">FAQs</a></li>
+            <li><a href="https://www.funngro.com/contact">Contact</a></li>
+            <li><a href="https://www.funngro.com/privacy-policy">Privacy Policy</a></li>
+            <li><a href="https://www.funngro.com/terms-and-conditions">Terms</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>Designed for India's smartest companies & teenagers</p>
+        <div class="footer-links">
+          <a href="https://www.funngro.com/teen">For Teens</a>
+          <a href="mailto:hello@funngro.com">hello@funngro.com</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const nav = document.getElementById('mainNav');
+    window.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 40));
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((e, i) => { if (e.isIntersecting) { setTimeout(() => e.target.classList.add('visible'), i * 70); observer.unobserve(e.target); } });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>
